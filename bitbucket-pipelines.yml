@@ -1,0 +1,57 @@
+definitions:
+  steps:
+    - step: &build
+        name: Build static files
+        image: node:16.15.0-slim
+        caches:
+          - node
+        script:
+          - export BUILD_ENV="development";
+          - if [ $BITBUCKET_BRANCH == "main" ]; then export BUILD_ENV="staging"; fi
+          - if [[ $BITBUCKET_TAG == *"release-"* ]]; then export BUILD_ENV="production"; fi
+          - echo "Build environment ${BUILD_ENV}"
+          - echo 'Running NPM Install'
+          - npm install
+          - rm -rf .next out # Remove built directories from previous builds (prevent EEXIST error)
+          - echo 'Running NPM RUN EXPORT'
+          - npm run export
+        artifacts:
+          - out/**
+
+    - step: &deploy
+        name: Deploy
+        script:
+          - echo  'Deploying to:' $DEPLOYMENT_ENVIRONMENT
+          - pipe: microsoft/azure-static-web-apps-deploy:main
+            variables:
+              APP_LOCATION: '$BITBUCKET_CLONE_DIR/out'
+              OUTPUT_LOCATION: ''
+              API_TOKEN: $DEPLOYMENT_TOKEN
+              DEPLOYMENT_ENVIRONMENT: $DEPLOYMENT_ENVIRONMENT
+              SKIP_APP_BUILD: 'true'
+              SKIP_API_BUILD: 'true'
+pipelines:
+  default:
+    - step:
+        <<: *build
+  branches:
+    'develop':
+      - step:
+          <<: *build
+      - step:
+          <<: *deploy
+          deployment: dev
+    'main':
+      - step:
+          <<: *build
+      - step:
+          <<: *deploy
+          deployment: staging
+  tags:
+    release-*:
+      - step:
+          <<: *build
+      - step:
+          <<: *deploy
+          deployment: production
+          trigger: manual

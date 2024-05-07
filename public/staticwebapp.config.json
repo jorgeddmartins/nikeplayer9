@@ -1,0 +1,12 @@
+{
+  "globalHeaders": {
+    "referrer-policy": "origin"
+  },
+  "forwardingGateway": {
+    "allowedForwardedHosts": [
+      "nikeplayer9-dev.omm.digital",
+      "nikeplayer9-staging.omm.digital",
+      "nikeplayer9.omm.digital"
+    ]
+  }
+}

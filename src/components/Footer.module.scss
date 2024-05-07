@@ -1,0 +1,33 @@
+@use '@styles/base' as *;
+
+.wrap {
+  position: relative;
+  padding: rem(36);
+  box-sizing: border-box;
+  background: $color-black;
+  display: flex;
+  flex-direction: column;
+  row-gap: rem(12);
+
+  a,
+  .copyright,
+  .cookiesSettings {
+    font-weight: 700;
+    font-size: rem(13);
+  }
+
+  a,
+  .cookiesSettings {
+    font-family: 'Palatino';
+    color: $color-white;
+    text-decoration: none;
+  }
+
+  .copyright {
+    font-family: 'ITC Avant Garde Gothic LT';
+    text-transform: uppercase;
+    color: #898989;
+    padding-top: rem(10);
+    box-sizing: border-box;
+  }
+}

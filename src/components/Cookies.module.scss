@@ -1,0 +1,208 @@
+@use '@styles/base' as *;
+
+.wrap {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.7);
+    animation-name: fadeIn;
+    animation-duration: 0.3s;
+    animation-fill-mode: both;
+  }
+  .cookiesContent {
+    position: relative;
+    width: 90%;
+    max-width: rem(327);
+    min-height: rem(481);
+    background: $color-white;
+    color: $color-black;
+    border-radius: rem(20);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    animation: goUp 1.2s forwards;
+    .h1 {
+      width: 100%;
+      font-family: 'ITC Avant Garde Gothic LT';
+      font-size: rem(30);
+      color: $color-black;
+      text-transform: uppercase;
+      line-height: rem(28);
+      margin-bottom: rem(0);
+    }
+    .topParagraph {
+      font-family: 'Palatino';
+      font-size: rem(15);
+      font-weight: 400;
+      color: #c4c4c4;
+      line-height: rem(18);
+      a {
+        text-decoration: underline;
+        color: #c4c4c4;
+      }
+    }
+    .container {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      border-bottom: rem(1) solid #ababab;
+      padding: rem(10) 0;
+      overflow: hidden;
+      .title {
+        display: flex;
+        column-gap: rem(40);
+      }
+      .h2 {
+        font-family: 'ITC Avant Garde Gothic LT';
+        font-size: rem(20);
+        color: $color-black;
+        text-transform: uppercase;
+        margin: 0;
+      }
+      .open {
+        position: absolute;
+        right: 0;
+        top: auto;
+        font-family: 'Palatino';
+        font-size: rem(20);
+        color: $color-black;
+      }
+      .close {
+        transform: rotate(45deg);
+      }
+      &:last-of-type {
+        border: 0;
+      }
+      .containerText {
+        font-family: 'Palatino';
+        font-size: rem(11);
+        color: $color-black;
+        font-weight: 400;
+        line-height: rem(13);
+        padding-left: rem(40);
+        margin-bottom: 0;
+        margin-top: rem(12);
+      }
+    }
+    section {
+      width: 100%;
+      height: 100%;
+      padding-left: rem(23);
+      padding-right: rem(23);
+      padding-top: rem(40);
+      padding-bottom: rem(30);
+      box-sizing: border-box;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      row-gap: rem(10);
+      .cookieInfo,
+      .cookieFunctional {
+        height: 100%;
+        flex: 1;
+      }
+      .cookieFunctional {
+        padding-top: rem(20);
+      }
+    }
+  }
+  .closeBtn {
+    position: absolute;
+    width: rem(32);
+    height: rem(32);
+    background: $color-black;
+    right: rem(15);
+    top: rem(15);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  button {
+    position: relative;
+    width: 100%;
+    height: rem(63);
+  }
+  .viewPriacy {
+    font-family: 'Palatino';
+    font-size: rem(11);
+    text-align: left;
+    color: #c4c4c4;
+    padding-top: rem(22);
+    border-top: 1px solid #c4c4c4;
+    margin-top: rem(20);
+    margin-bottom: 0;
+    a {
+      color: $color-black;
+      text-decoration: none;
+    }
+  }
+  &.hide {
+    transition-delay: 1.2s;
+    transition-timing-function: ease;
+    transition-duration: 0.01s;
+    transform: translateY(200%);
+    .overlay {
+      animation-name: fadeOut;
+      animation-duration: 0.3s;
+      animation-fill-mode: both;
+    }
+    .cookiesContent {
+      animation-name: goDown;
+      animation-duration: 0.7s;
+      animation-fill-mode: both;
+      animation-timing-function: cubic-bezier(0, 0, 0.27, 1.17);
+    }
+  }
+}
+
+@keyframes goUp {
+  0% {
+    top: 100%;
+  }
+  100% {
+    top: 0;
+  }
+}
+
+@keyframes goDown {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: 100%;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

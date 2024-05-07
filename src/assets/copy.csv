@@ -1,0 +1,48 @@
+key,description,text
+meta.title,The main title of the page,Force9
+meta.author,"Meta data indicating the ""author"" of the website",Nike
+meta.description,Description of the website,AR experience at NikeTown London
+meta.keywords,Keyword seperated by commas,
+meta.og.site_name,"Site name displayed when sharing via Open Graph (Facebook, Teams, Slack, Whatsapp, …)",Force9
+meta.og.title,Title displayed when sharing via Open Graph,Force9
+meta.og.description,Description when sharing via Open Graph,AR experience at NikeTown London
+meta.twitter.title,Title when sharing via Twitter,Force9
+meta.twitter.description,Description when sharing via Twitter,AR experience at NikeTown London
+permission.camera.heading,,Permissions not granted
+permission.camera.copy,,You need to accept camera permissions to continue.
+permission.sensor.heading,,Permissions not granted
+permission.sensor.copy,,You need to accept motion and orientation permissions to continue.
+permission.refresh.cta,,Refresh
+loading.copy,,Loading…
+error.generic.copy,,Oop! Something went wrong
+error.cta.refresh,,Try again
+error.desktop.heading,,This is a mobile experience only
+error.desktop.scan,,Scan to open
+error.landscape.heading,,Rotate your phone
+error.landscape.copy,,Rotate your phone to portrait mode and try again.
+landing.tracking.cta,Screen needed for asking sensor permission (iOS),Start
+overlay.align,,Point the camera at NikeTown
+splash.heading,,Nike Athlete Reveal
+splash.cta,,Start the AR experience
+carousel.heading.1,Headong on first carousel slide,Head to NikeTown London
+carousel.heading.2,Heading on second carousel slide,Stand opposite NikeTown
+carousel.cta.directions,,Get directions
+carousel.cta.start,,I am ready!
+cookies.heading,,Your Cookie Setting
+cookies.copy,,"Nike  uses  cookies  that  are  necessary  for  our  website  to  function  effectively. To  get  more information click the “More Information” button or visit Cookie Settings at the bottom of the website.  To  get  more  information  about  these  cookies  and  the  processing  of  your  personal data, check our <a href=""https://agreementservice.svs.nike.com/rest/agreement?agreementType=privacyPolicy&uxId=com.nike.commerce.nikedotcom.web&country=FI&language=en&requestType=redirect"" rel=""noreferrer"" target=""_blank"">Privacy & Cookie Policy</a>"
+cookies.functional.heading,,Functional
+cookies.functional.copy,,"These cookies are necessary for basic site functionality and, therefore, are always enabled. Also, these cookies allow the users to be remembered as they explore the site during a single session or, if they request, from session to session.They help to make the bag and checkout process possible as well as assisting in security issues and conforming to regulations."
+cookies.analytics.heading,,Analytics
+cookies.analytics.copy,,"These cookies allow Nike to measure user activity on the website. They help Nike understand how many users visit the website, how long they stay on the site, and which parts of the website are the most popular. These cookies are not used for advertising."
+cookies.cta,,Understood
+preview.cta,,Share
+footer.cookie-policy,,Cookie Policy
+footer.privacy,,Privacy Policy
+footer.terms,,Terms of Use
+footer.rights,,"2023 Nike, Inc All Rights Reserved"
+footer.cookies-settings,,Cookies Settings
+cookies.moreinfo.CTA,,More Information
+cookies.done.CTA,,Done
+cookies.view.policy,,"View <a href=""https://agreementservice.svs.nike.com/rest/agreement?agreementType=adnetwork&uxId=default&country=GB&language=en&requestType=redirect"" rel=""noreferrer"" target=""_blank"">Privacy & Cookie</a> Policy for full details."
+desktop.copy,,This is for a mobile experience only
+desktop.title,,OOPS!

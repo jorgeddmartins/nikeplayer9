@@ -1,0 +1,71 @@
+@use '@styles/base' as *;
+
+.container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+
+  &.show {
+    opacity: 1;
+
+    button {
+      pointer-events: all;
+    }
+  }
+
+  .content {
+    img {
+      position: absolute;
+      top: rem(75);
+      left: rem(48);
+      width: calc(100% - rem(96));
+      height: calc(100% - rem(96) - rem(123));
+      object-fit: contain;
+      object-position: center center;
+    }
+
+    button {
+      position: absolute;
+      left: rem(48);
+      width: calc(100% - rem(96));
+      bottom: rem(40);
+    }
+  }
+
+  .goBack {
+    position: absolute;
+    display: block;
+    width: rem(38);
+    height: rem(38);
+    top: rem(20);
+    left: rem(7);
+    z-index: 2;
+    pointer-events: all;
+
+    svg {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  .backImg {
+    opacity: 0.5;
+  }
+
+  .background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: $color-black;
+    opacity: 0.8;
+    backdrop-filter: blur(3px);
+  }
+}

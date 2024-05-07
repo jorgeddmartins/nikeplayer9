@@ -1,0 +1,57 @@
+@use '@styles/base' as *;
+
+.wrap {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  color: $color-white;
+  padding: rem(19);
+  box-sizing: border-box;
+  display: flex;
+
+  .content {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    .landscapeMsg {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .landscapeContent {
+        text-align: center;
+      }
+    }
+  }
+
+  .title {
+    font-family: 'ITC Avant Garde Gothic LT';
+    font-size: rem(20);
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0 auto rem(10);
+    padding-top: rem(20);
+    display: block;
+    line-height: rem(42);
+  }
+  .subTitle {
+    font-family: 'ITC Avant Garde Gothic LT';
+    font-size: rem(14);
+    font-weight: 400;
+    width: 100%;
+    max-width: rem(280);
+    margin: auto;
+    display: block;
+  }
+
+  .rotate {
+    height: rem(65);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

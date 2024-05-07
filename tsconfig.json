@@ -1,0 +1,76 @@
+{
+    "compilerOptions": {
+        "target": "es5",
+        "lib": [
+            "dom",
+            "dom.iterable",
+            "esnext"
+        ],
+        "allowJs": true,
+        "skipLibCheck": true,
+        "strict": false,
+        "forceConsistentCasingInFileNames": true,
+        "noEmit": true,
+        "esModuleInterop": true,
+        "module": "esnext",
+        "moduleResolution": "node",
+        "resolveJsonModule": true,
+        "isolatedModules": true,
+        "jsx": "preserve",
+        "incremental": true,
+        "baseUrl": ".",
+        "paths": {
+            "holo-video-object-threejs": [
+                "src/lib/holo-three.js"
+            ],
+            "@assets/*": [
+                "src/assets/*"
+            ],
+            "@components": [
+                "src/components/index"
+            ],
+            "@components/*": [
+                "src/components/*"
+            ],
+            "@hooks/*": [
+                "src/hooks/*"
+            ],
+            "@layouts/*": [
+                "src/layouts/*"
+            ],
+            "@lib/*": [
+                "src/lib/*"
+            ],
+            "@pages/*": [
+                "pages/*"
+            ],
+            "@public/*": [
+                "public/*"
+            ],
+            "@store": [
+                "src/store/index"
+            ],
+            "@store/*": [
+                "src/store/*"
+            ],
+            "@styles/*": [
+                "src/styles/*"
+            ],
+            "@utils/*": [
+                "src/utils/*"
+            ],
+            "@3d/*": [
+                "src/3d/*"
+            ]
+        }
+    },
+    "include": [
+        "next-env.d.ts",
+        "**/*.ts",
+        "**/*.tsx"
+    ],
+    "exclude": [
+        "node_modules",
+        "public/3d"
+    ]
+}

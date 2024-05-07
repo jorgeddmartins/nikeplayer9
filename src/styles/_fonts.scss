@@ -1,0 +1,31 @@
+@font-face {
+  font-family: 'ITC Avant Garde Gothic LT';
+  src: url('../assets/fonts/AvantGardeLT-Bold.eot');
+  src: url('../assets/fonts/AvantGardeLT-Bold.eot?#iefix')
+      format('embedded-opentype'),
+    url('../assets/fonts/AvantGardeLT-Bold.woff2') format('woff2'),
+    url('../assets/fonts/AvantGardeLT-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Palatino';
+  src: url('../assets/fonts/Palatino.eot');
+  src: url('../assets/fonts/Palatino.eot?#iefix') format('embedded-opentype'),
+    url('../assets/fonts/Palatino.woff2') format('woff2'),
+    url('../assets/fonts/Palatino.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url('../assets/fonts/HelveticaNeue-CondensedBold.eot');
+  src: url('../assets/fonts/HelveticaNeue-CondensedBold.eot?#iefix')
+      format('embedded-opentype'),
+    url('../assets/fonts/HelveticaNeue-CondensedBold.woff2') format('woff2'),
+    url('../assets/fonts/HelveticaNeue-CondensedBold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}

@@ -1,0 +1,51 @@
+@use '@styles/base' as *;
+
+.wrap {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  padding: rem(19);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+
+  .alignContent {
+    width: 100%;
+    height: 100%;
+    max-width: rem(275);
+    max-height: rem(324);
+    padding: rem(50) rem(38) 0;
+    box-sizing: border-box;
+    background-image: url('../assets/img/align.svg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    row-gap: rem(30);
+    opacity: 1;
+    transition: opacity 0.3s ease, transform 0.2s ease;
+
+    &.hide {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+
+    .alignTitle {
+      font-family: 'ITC Avant Garde Gothic LT';
+      color: $color-white;
+      font-size: rem(18);
+      font-weight: 700;
+      line-height: rem(24);
+      text-align: center;
+      text-transform: uppercase;
+    }
+  }
+}

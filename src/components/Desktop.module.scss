@@ -1,0 +1,52 @@
+@use '@styles/base' as *;
+
+.wrap {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  color: $color-white;
+  padding: rem(19);
+  box-sizing: border-box;
+  display: none;
+  @include breakpoint(desktop) {
+    display: flex;
+    z-index: 2;
+  }
+
+  .content {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    .desktopMsg {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .desktopContent {
+        text-align: center;
+      }
+    }
+  }
+
+  .title, 
+  .message {
+    width: rem(300);
+    font-family: 'ITC Avant Garde Gothic LT';
+    font-size: rem(20);
+    font-weight: 700;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    line-height: rem(20);
+  }
+}
+
+.mobile {
+  display: block;
+  @include breakpoint(desktop) {
+    display: none;
+  }
+}

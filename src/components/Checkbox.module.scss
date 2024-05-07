@@ -1,0 +1,48 @@
+@use '@styles/base' as *;
+
+.wrap {
+  position: relative;
+  width: 0;
+  height: rem(26);
+  cursor: pointer;
+  user-select: none;
+
+  input {
+    display: none;
+
+    &:checked ~ .checkMark {
+      &::after {
+        display: block;
+      }
+    }
+  }
+
+  .checkMark {
+    &::after {
+      width: rem(15);
+      height: rem(18);
+      left: rem(6);
+      top: rem(3);
+      background-image: url('../assets/img/tick.svg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+  }
+}
+
+.checkMark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: rem(24);
+  width: rem(24);
+  border: 1px solid $color-black;
+  background: $color-white;
+
+  &::after {
+    content: '';
+    position: absolute;
+    display: none;
+  }
+}
